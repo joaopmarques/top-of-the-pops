@@ -1,7 +1,7 @@
 import { time } from 'console';
 import Image from 'next/image';
 
-export default function SongList({ data, liveData }: { data: any, liveData: boolean }) {
+export default function SongList({ data, liveData }: { data: any, liveData?: boolean }) {
   return (
     <>
     <ul className="bg-gradient-to-tr from-teal-50 via-sky-50 to-violet-50 bg-gradient-opacity-20 p-2 rounded-3xl">
