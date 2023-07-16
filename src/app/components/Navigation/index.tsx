@@ -5,10 +5,10 @@ import { useState, useEffect } from 'react';
 function Header() {
   return (
     <div className="mb-20">
-      <h1 className="text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl uppercase font-thin text-center bg-gradient-to-r from-pink-400 via-blue-400 to-teal-300 text-transparent bg-clip-text bg-300% animate-gradient">
-        Top of the Pops
+      <h1 className="relative text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl uppercase font-black text-center text-3d">
+        <div className="bg-gradient-to-r from-pink-400 via-blue-400 to-teal-300 text-transparent bg-clip-text bg-300% animate-gradient">Top of the Pops</div>
       </h1>
-      <p className="block mt-6 text-lg text-indigo-800 text-center">Serving bops every day, every week. ✌️</p>
+      <p className="block mt-6 text-lg text-indigo-800 text-center">Serving bops every week. ✌️</p>
     </div>
   )
 }
