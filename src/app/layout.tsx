@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   title: 'Top of the Pops',
   description: 'Serving bops every day, every week. Check out the top Genius songs of the week.',
   authors: [{ name: "João P. Marques", url: "https://jpmarqu.es" }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://top-of-the-pops.vercel.app/',
+    images: [
+      {
+        url: 'https://top-of-the-pops.vercel.app/top-of-the-pops-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Top of the Pops',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

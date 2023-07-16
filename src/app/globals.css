@@ -22,12 +22,6 @@ body {
     var(--background-start);
 }
 
-.animate-gradient {
-  background-size: 300%;
-  -webkit-animation: animatedgradient 2s ease infinite alternate;
-  -moz-animation: animatedgradient 2s ease infinite alternate;
-  animation: animatedgradient 2s ease infinite alternate;
-}
 
 @keyframes animatedgradient {
   0% {
@@ -39,4 +33,39 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.text-3d {
+  position: relative;
+}
+
+.text-3d > div {
+  display: flex;
+  background-size: 300%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: animatedgradient 2s ease infinite alternate;
+  }
+}
+
+.text-3d > div::after {
+  transform: translateY(0px);
+  mix-blend-mode: luminosity;
+  position: absolute;
+  content: "TOP OF THE POPS";
+  text-shadow: 0px 0px 0 rgb(150,252,218),
+  1px 1px 0 rgb(147,249,215),
+  2px 2px 0 rgb(144,246,212),
+  3px 3px 0 rgb(141,243,209),
+  4px 4px 0 rgb(138,240,206),
+  5px 5px 0 rgb(135,237,203),
+  6px 6px 0 rgb(132,234,200),
+  7px 7px 0 rgb(129,231,197),
+  8px 8px 0 rgb(126,228,194),
+  9px 9px 0 rgb(123,225,191),
+  10px 10px 0 rgb(120,222,188),
+  11px 11px  0 rgb(117,219,185),
+  12px 12px 11px rgba(255,255,255,0.96),
+  12px 12px 1px rgba(255,255,255,0.5),
+  0px 0px 11px rgba(255,255,255,.2);
 }
