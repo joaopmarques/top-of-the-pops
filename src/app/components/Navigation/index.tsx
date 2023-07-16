@@ -10,8 +10,8 @@ function Header() {
           Top of the Pops
         </div>
       </h1>
-      <p className="block mt-6 text-lg text-indigo-800 text-center">
-        Serving bops every week. ✌️
+      <p className="block mt-6 text-lg text-blue-300 text-center">
+        serving bops every week ✌️
       </p>
     </div>
   )
@@ -46,9 +46,28 @@ function Footer() {
 
   // pick a random anagram
   const [randomAnagram, setRandomAnagram] = useState<string>('')
-  useEffect(() => {
+  const [clickCount, setClickCount] = useState<number>(0)
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const generateRandomAnagram = () => {
     setRandomAnagram(anagrams[Math.floor(Math.random() * anagrams.length)])
-  }, [anagrams])
+  }
+
+  useEffect(() => {
+    generateRandomAnagram()
+  }, [])
+
+  const handleTextClick = () => {
+    generateRandomAnagram()
+
+    if (clickCount === 11) {
+      alert(
+        "👋 hey there, fellow creative person. the world needs more people like you. the ones who aren't afraid to dream and make new things happen. stay creative, and keep stoking that fire until the day you die. we need you!",
+      )
+    }
+
+    setClickCount(clickCount + 1)
+  }
 
   return (
     <footer className="mt-24 flex justify-between items-center w-full h-24 border-t text-gray-500">
@@ -68,12 +87,16 @@ function Footer() {
             className="underline hover:text-indigo-300"
             href="https://rapidapi.com/Glavier/api/genius-song-lyrics1"
             target-="_blank">
-            RapidAPI/Genius
+            Genius
           </a>
         </p>
       </div>
       <div className="flex flex-col items-end">
-        <p className="text-sm mb-1">{randomAnagram}</p>
+        <p
+          className="text-sm mb-1 lowercase select-none hover:text-indigo-300 cursor-pointer"
+          onClick={() => handleTextClick()}>
+          {randomAnagram}
+        </p>
         <p className="text-xs">stay creative ✌️</p>
       </div>
     </footer>

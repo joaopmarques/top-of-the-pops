@@ -41,7 +41,7 @@ export default function SongList({
                   target="_blank">
                   {track.item.primary_artist.name}
                 </a>
-                <span className="text-slate-300">
+                <span className="text-slate-300 lowercase">
                   {track.item.release_date_for_display}
                 </span>
               </div>
@@ -51,16 +51,16 @@ export default function SongList({
       </ul>
       {liveData ? (
         <span className="text-xs text-slate-300 mt-3">
-          Data updated {new Date().toLocaleTimeString('en-US')}{' '}
+          data updated at {new Date().toLocaleTimeString('en-US')}{' '}
           <Link className="underline hover:text-indigo-300" href="/">
-            See archived data
+            see archived data
           </Link>
         </span>
       ) : (
         <span className="text-xs text-slate-300 mt-3">
-          Data archived from 2023-05-15.{' '}
+          data from 2023-05-15.{' '}
           <Link className="underline hover:text-indigo-300" href="/live-data">
-            See live data
+            see live data
           </Link>
         </span>
       )}
