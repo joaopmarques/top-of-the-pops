@@ -24,9 +24,10 @@ body {
 
 .animate-gradient {
   background-size: 300%;
-  -webkit-animation: animatedgradient 2s ease infinite alternate;
-  -moz-animation: animatedgradient 2s ease infinite alternate;
-  animation: animatedgradient 2s ease infinite alternate;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: animatedgradient 2s ease infinite alternate;
+  } 
 }
 
 @keyframes animatedgradient {

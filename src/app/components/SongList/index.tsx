@@ -6,14 +6,14 @@ export default function SongList({ data, liveData }: { data: any, liveData?: boo
     <>
     <ul className="bg-gradient-to-tr from-teal-50 via-sky-50 to-violet-50 bg-gradient-opacity-20 p-2 md:p-3 lg-p-4 rounded-3xl">
       {data?.chart_items.map((track: any, index: number) => (
-        <li className="relative flex items-center p-3 md:p-5 xl:p-7 m-3 md:m-6 rounded-2xl bg-white shadow-3xl shadow-fuchsia-50 border border-violet-100 text-slate-600" key={track.item.id}>
+        <li className="relative flex items-center p-3 md:p-5 m-3 md:m-6 rounded-2xl bg-white shadow-3xl shadow-fuchsia-50 border border-violet-100 text-slate-600" key={track.item.id}>
           <span className="absolute flex justify-center items-center h-7 w-7 bg-yellow-200 rounded-3xl text-slate-600 -top-2 -left-2 text-sm font-bold mr-4">{index + 1}</span>
           <Image
             src={track.item.song_art_image_thumbnail_url}
             alt={track.item.title}
-            width={74}
-            height={74}
-            className="mr-4 rounded-md"
+            width={256}
+            height={256}
+            className="mr-4 rounded-md w-[74px] h-[74px] md:w-[92px] md:h-[92px] lg:w-[128px] lg:h-[128px]"
             />
           <div>
             <p className="text-md lg:text-md font-medium">
