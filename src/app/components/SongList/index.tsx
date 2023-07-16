@@ -13,7 +13,7 @@ export default function SongList({
       <ul className="bg-gradient-to-tr from-teal-50 via-sky-50 to-violet-50 bg-gradient-opacity-20 p-2 md:p-3 lg-p-4 rounded-3xl">
         {data?.chart_items.map((track: any, index: number) => (
           <li
-            className="relative flex items-center p-3 md:p-5 m-3 md:m-6 rounded-2xl bg-white shadow-3xl shadow-fuchsia-50 border border-violet-100 text-slate-600"
+            className="relative flex items-start sm:items-center p-3 md:p-5 m-3 md:m-6 rounded-2xl bg-white shadow-3xl shadow-fuchsia-50 border border-violet-100 text-slate-600"
             key={track.item.id}>
             <span className="absolute flex justify-center items-center h-7 w-7 bg-yellow-200 rounded-3xl text-slate-600 -top-2 -left-2 text-sm font-bold mr-4">
               {index + 1}
@@ -26,7 +26,7 @@ export default function SongList({
               className="mr-4 rounded-md w-[74px] h-[74px] md:w-[92px] md:h-[92px] lg:w-[128px] lg:h-[128px]"
             />
             <div>
-              <p className="text-md lg:text-md font-medium">
+              <p className="text-sm md:text-md lg:text-lg font-medium">
                 <a
                   href={track.item.relationships_index_url}
                   target="_blank"
@@ -34,14 +34,14 @@ export default function SongList({
                   {track.item.title}
                 </a>
               </p>
-              <div className="flex items-end text-sm">
+              <div className="flex items-end text-xs md:text-sm">
                 <a
-                  className="text-indigo-400 hover:text-indigo-300 text-md mt-0.5 mr-2"
+                  className="text-indigo-400 hover:text-indigo-300 mt-0.5 mr-2"
                   href={track.item.primary_artist.url}
                   target="_blank">
                   {track.item.primary_artist.name}
                 </a>
-                <span className="text-slate-300 lowercase">
+                <span className="text-slate-300 lowercase hidden sm:block">
                   {track.item.release_date_for_display}
                 </span>
               </div>
