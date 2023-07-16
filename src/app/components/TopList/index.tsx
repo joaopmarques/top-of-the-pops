@@ -11,19 +11,19 @@ export default async function TopList({ liveData }: { liveData?: boolean }) {
       },
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': process.env.API_KEY || "",
-        'X-RapidAPI-Host': process.env.API_HOST || "",
+        'X-RapidAPI-Key': process.env.API_KEY ?? '',
+        'X-RapidAPI-Host': process.env.API_HOST ?? '',
       },
-    };
-  
-    const url = process.env.API_URL || "";
-  
+    }
+
+    const url = process.env.API_URL ?? ''
+
     try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      data = result;
+      const response = await fetch(url, options)
+      const result = await response.json()
+      data = result
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
   } else {
     data = archivedData
