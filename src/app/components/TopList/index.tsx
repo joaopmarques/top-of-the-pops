@@ -11,12 +11,12 @@ export default async function TopList({ liveData }: { liveData?: boolean }) {
       },
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': process.env.NEXT_PUBLIC_API_KEY || "",
-        'X-RapidAPI-Host': process.env.NEXT_PUBLIC_API_HOST || "",
+        'X-RapidAPI-Key': process.env.API_KEY || "",
+        'X-RapidAPI-Host': process.env.API_HOST || "",
       },
     };
   
-    const url = process.env.NEXT_PUBLIC_API_URL || "";
+    const url = process.env.API_URL || "";
   
     try {
       const response = await fetch(url, options);
