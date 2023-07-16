@@ -57,11 +57,11 @@ body {
     7px 7px 0 rgb(129 231 197),
     8px 8px 0 rgb(126 228 194),
     9px 9px 0 rgb(123 225 191),
-    10 10 0 rgb(120 222 188),
+    10px 10px 0 rgb(120 222 188),
     11px 11px 0 rgb(117 219 185),
     12px 12px 11px rgb(255 255 255 / 96%),
-    12px 12px 1px rgb(255 255 255 / 50%),
-    0 0 11px rgb(255 255 255 / 20%);
+    12px 12px 1px rgb(255 255 255 / 5%),
+    0 0 11px rgb(255 255 255 / 2%);
   content: 'TOP OF THE POPS';
   mix-blend-mode: luminosity;
   transform: translateY(0);
