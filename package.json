@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint:code": "next lint",
+    "lint:styles": "stylelint \"src/**/*.css\"",
+    "lint:format": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css}\""
   },
   "dependencies": {
     "@types/node": "20.4.2",

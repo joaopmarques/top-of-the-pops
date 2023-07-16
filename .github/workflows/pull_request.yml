@@ -1,0 +1,29 @@
+# GitHub Actions CI Configuration
+# On a pull request, run all linters
+
+name: Lint Codebase
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Lint JS/TS
+        run: |
+          npm run lint:code
+      - name: Lint CSS
+        run: |
+          npm run lint:styles
+      - name: Lint code formatting
+        run: |
+          npm run lint:format
+      - name: Run unit tests
+        run: |
+          npm run test
