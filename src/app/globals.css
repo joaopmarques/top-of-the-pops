@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
   --foreground-color: #030712;
   --background-start: #eef2ff17;
   --background-end: #fdf4ff1f;
@@ -14,22 +13,19 @@
 
 body {
   color: var(--foreground);
-  background: linear-gradient(
-      to right top,
-      transparent,
-      var(--background-end)
-    )
+  background: linear-gradient(to right top, transparent, var(--background-end))
     var(--background-start);
 }
-
 
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -49,23 +45,24 @@ body {
 }
 
 .text-3d > div::after {
-  transform: translateY(0px);
-  mix-blend-mode: luminosity;
   position: absolute;
-  content: "TOP OF THE POPS";
-  text-shadow: 0px 0px 0 rgb(150,252,218),
-  1px 1px 0 rgb(147,249,215),
-  2px 2px 0 rgb(144,246,212),
-  3px 3px 0 rgb(141,243,209),
-  4px 4px 0 rgb(138,240,206),
-  5px 5px 0 rgb(135,237,203),
-  6px 6px 0 rgb(132,234,200),
-  7px 7px 0 rgb(129,231,197),
-  8px 8px 0 rgb(126,228,194),
-  9px 9px 0 rgb(123,225,191),
-  10px 10px 0 rgb(120,222,188),
-  11px 11px  0 rgb(117,219,185),
-  12px 12px 11px rgba(255,255,255,0.96),
-  12px 12px 1px rgba(255,255,255,0.5),
-  0px 0px 11px rgba(255,255,255,.2);
+  text-shadow:
+    0 0 0 rgb(150 252 218),
+    1px 1px 0 rgb(147 249 215),
+    2px 2px 0 rgb(144 246 212),
+    3px 3px 0 rgb(141 243 209),
+    4px 4px 0 rgb(138 240 206),
+    5px 5px 0 rgb(135 237 203),
+    6px 6px 0 rgb(132 234 200),
+    7px 7px 0 rgb(129 231 197),
+    8px 8px 0 rgb(126 228 194),
+    9px 9px 0 rgb(123 225 191),
+    10 10 0 rgb(120 222 188),
+    11px 11px 0 rgb(117 219 185),
+    12px 12px 11px rgb(255 255 255 / 96%),
+    12px 12px 1px rgb(255 255 255 / 50%),
+    0 0 11px rgb(255 255 255 / 20%);
+  content: 'TOP OF THE POPS';
+  mix-blend-mode: luminosity;
+  transform: translateY(0);
 }
