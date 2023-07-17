@@ -30,7 +30,6 @@
     "@pixelmatters/stylelint-config-pixelmatters": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
-    "cypress": "^12.17.1",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "prettier": "^3.0.0",
