@@ -9,21 +9,24 @@ on:
 
 jobs:
   lint:
+    name: Lint Codebase
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm install
       - name: Lint JS/TS
-        run: |
-          npm run lint:code
+        run: npm run lint:code
       - name: Lint CSS
-        run: |
-          npm run lint:styles
+        run: npm run lint:styles
       - name: Lint code formatting
-        run: |
-          npm run lint:format
+        run: npm run lint:format
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
       - name: Run unit tests
-        run: |
-          npm run test
+        run: npm run test
