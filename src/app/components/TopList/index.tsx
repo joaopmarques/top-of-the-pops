@@ -1,9 +1,7 @@
 import archivedData from '@/app/api/demo-request.json'
 import SongList from '@/app/components/SongList'
 
-export default async function TopList({ liveData }: { liveData?: boolean }) {
-  let data: any = {}
-
+async function getData(liveData: boolean) {
   if (liveData) {
     const options = {
       next: {
@@ -21,13 +19,20 @@ export default async function TopList({ liveData }: { liveData?: boolean }) {
     try {
       const response = await fetch(url, options)
       const result = await response.json()
-      data = result
+      return result
     } catch (error) {
       console.error(error)
     }
   } else {
-    data = archivedData
+    return archivedData
   }
+}
+
+async function TopList({ liveData }: { liveData: boolean }) {
+  const data = await getData(liveData)
 
   return <SongList data={data} liveData={liveData} />
 }
+
+export default TopList
+export { getData }

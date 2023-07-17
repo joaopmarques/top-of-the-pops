@@ -6,7 +6,7 @@ export default function SongList({
   liveData,
 }: {
   data: any
-  liveData?: boolean
+  liveData: boolean
 }) {
   return (
     <>

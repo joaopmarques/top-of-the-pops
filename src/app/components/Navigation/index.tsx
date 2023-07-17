@@ -70,7 +70,9 @@ function Footer() {
   }
 
   return (
-    <footer className="mt-24 flex justify-between items-center w-full h-24 border-t text-gray-500">
+    <footer
+      role="contentinfo"
+      className="mt-24 flex justify-between items-center w-full h-24 border-t text-gray-500">
       <div>
         <p className="text-sm mb-1">
           made by{' '}
