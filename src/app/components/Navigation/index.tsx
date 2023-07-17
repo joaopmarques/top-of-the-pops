@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="mb-20">
       <h1 className="relative text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl uppercase font-black text-center text-3d">
-        <div className="bg-gradient-to-r from-fuchsia-300 via-sky-300 to-yellow-300 text-transparent bg-clip-text bg-300% animate-gradient">
+        <div className="bg-gradient-to-r from-fuchsia-200 via-teal-200 to-yellow-200 text-transparent bg-clip-text bg-300% animate-gradient">
           Top of the Pops
         </div>
       </h1>
@@ -70,7 +70,9 @@ function Footer() {
   }
 
   return (
-    <footer className="mt-24 flex justify-between items-center w-full h-24 border-t text-gray-500">
+    <footer
+      role="contentinfo"
+      className="mt-24 flex justify-between items-center w-full h-24 border-t text-gray-500">
       <div>
         <p className="text-sm mb-1">
           made by{' '}

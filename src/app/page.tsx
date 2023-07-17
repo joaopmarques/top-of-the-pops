@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8 md:p-16 lg:p-32 !pt-32">
       <Header />
-      <TopList />
+      <TopList liveData={false} />
       <Footer />
     </main>
   )
